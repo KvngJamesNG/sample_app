@@ -35,6 +35,21 @@ gem "jbuilder"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem 'bcrypt', '~> 3.1', '>= 3.1.20'
 
+# Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
+gem 'faker', '~> 3.4', '>= 3.4.2'
+
+# will_paginate provides a simple API for performing paginated queries with Active Record and Sequel, and includes helpers for rendering pagination links in Rails, Sinatra, and Hanami web apps.
+#gem 'will_paginate', '~> 4.0', '>= 4.0.1'
+
+# Hooks into will_paginate to format the html to match Twitter Bootstrap styling. Extension code was originally written by Isaac Bowen (https://gist.github.com/1182136).
+#gem 'bootstrap-will_paginate', '~> 1.0'
+
+# Agnostic pagination in plain ruby. It does it all. Better.
+#gem 'pagy', '~> 9.0', '>= 9.0.3'
+
+# Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 
