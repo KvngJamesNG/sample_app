@@ -23,6 +23,8 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
+# gem 'sassc'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
@@ -96,3 +98,7 @@ group :production do
   # Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later.
   gem 'pg', '~> 1.5', '>= 1.5.8'
 end
+
+# group :assets do
+#   gem 'sassc-rails'
+# end
