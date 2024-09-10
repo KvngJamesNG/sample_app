@@ -79,6 +79,8 @@ group :development do
 
   gem "bootstrap-sass"
 
+  gem 'sassc'
+
   gem "sassc-rails"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
