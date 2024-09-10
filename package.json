@@ -1,0 +1,6 @@
+{
+    "name": "sample_app",
+    "engines": {
+      "node": "20.9.0"
+    }
+  }
