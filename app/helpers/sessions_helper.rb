@@ -16,12 +16,13 @@ module SessionsHelper
   end
 
   # Returns the user corresponding to the remember token cookie.
+  # Returns the current logged-in user (if any).
   def current_user
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.encrypted[:user_id])
       user = User.find_by(id: user_id)
-      if user && user.authenicated?(cookies[:remember_token])
+      if user && user.authenicated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end
@@ -43,7 +44,7 @@ module SessionsHelper
     forget(current_user)
       reset_session
       @current_user = nil
-    end
+  end
 
     # Forgets a pesistent session
   def forget(user)

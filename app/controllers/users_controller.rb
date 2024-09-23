@@ -6,10 +6,11 @@ before_action :admin_user, only: :destroy
 
   def show
     @user = User.find(params[:id])
+    redirect_to root_url and return unless FILL_IN
   end
 
   def index
-    @users = User.page(params[:page]).per(10)
+    @users = User.where(activated: FILL_IN).page(params[:page]).per(10)
   end
 
   def new
@@ -19,7 +20,7 @@ before_action :admin_user, only: :destroy
   def create
     @user = User.new(user_params)
     if @user.save
-      UserMailer.account_activation(@user).deliver_now
+      @user.send_activation_email
       flash[:info] = "Please check your Email to activate your account."
       redirect_to root_url
       # reset_session

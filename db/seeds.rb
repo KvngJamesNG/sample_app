@@ -9,9 +9,9 @@
 #   end
 # Create a main sample user
 User.create!(name: "James",
-             email: "sample1@example.com",
-             password: "test123",
-             password_confirmation: "test123",
+             email: "admin@example.com",
+             password: "admin123",
+             password_confirmation: "admin123",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
