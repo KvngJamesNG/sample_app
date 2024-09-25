@@ -86,7 +86,7 @@ group :development do
 
   gem 'sassc'
 
-  gem "sassc-rails"
+  # gem "sassc-rails"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
@@ -95,6 +95,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'minitest-reporters', '~> 1.7', '>= 1.7.1'
 end
 
 group :production do
@@ -102,6 +103,7 @@ group :production do
   gem 'pg', '~> 1.5', '>= 1.5.8'
 end
 
-# group :assets do
-#   gem 'sassc-rails'
-# end
+group :assets do
+  gem 'sassc-rails'
+  gem 'uglifier'
+end
