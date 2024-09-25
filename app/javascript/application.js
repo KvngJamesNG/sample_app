@@ -2,3 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "custom/menu"
+
+//= require jquery
+//= require popper
+//= require bootstrap

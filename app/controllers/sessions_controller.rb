@@ -17,6 +17,10 @@ class SessionsController < ApplicationController
       flash[:warning] = message
       redirect_to root_url
   end
+else
+  # Invalid login credentials
+  flash.now[:danger] = 'Invalid email/password combination'
+  render 'new', status: :unprocessable_entity
   end
   end
 

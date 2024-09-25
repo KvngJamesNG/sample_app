@@ -101,9 +101,12 @@ end
 group :production do
   # Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later.
   gem 'pg', '~> 1.5', '>= 1.5.8'
+  gem 'sassc-rails'     # For SASS support (CSS pre-processing)
+  gem 'uglifier'         # To compress/minify JavaScript files
+  gem 'webpacker'        # If you're using Webpacker to manage JavaScript dependencies
 end
 
-group :assets do
-  gem 'sassc-rails'
-  gem 'uglifier'
-end
+# group :assets do
+#   gem 'sassc-rails'
+#   gem 'uglifier'
+# end

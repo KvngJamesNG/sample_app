@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 # Create a main sample user
-User.create!(name: "James",
+User.create!(name: "Admin James",
              email: "admin@example.com",
              password: "admin123",
              password_confirmation: "admin123",
