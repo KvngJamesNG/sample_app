@@ -6,11 +6,10 @@ before_action :admin_user, only: :destroy
 
   def show
     @user = User.find(params[:id])
-    redirect_to root_url and return unless FILL_IN
   end
 
   def index
-    @users = User.where(activated: FILL_IN).page(params[:page]).per(10)
+    @users = User.page(params[:page]).per(10)
   end
 
   def new
@@ -23,10 +22,6 @@ before_action :admin_user, only: :destroy
       @user.send_activation_email
       flash[:info] = "Please check your Email to activate your account."
       redirect_to root_url
-      # reset_session
-      # log_in @user
-      # flash[:success] = "Welcome to the Sample App!"
-      # redirect_to @user
     else
       render 'new', status: :unprocessable_entity
     end
