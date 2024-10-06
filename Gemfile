@@ -37,6 +37,8 @@ gem 'faker', '~> 3.4', '>= 3.4.2'
 
 gem 'bootstrap', '~> 5.3.3'
 
+gem 'webpacker'
+
 # Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
@@ -78,7 +80,7 @@ group :production do
   gem 'pg', '~> 1.5', '>= 1.5.8'
   gem 'sass-rails'
   gem 'uglifier'
-  gem 'webpacker'
+  
 end
 
 # group :assets do
