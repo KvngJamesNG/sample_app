@@ -35,6 +35,8 @@ gem 'faker', '~> 3.4', '>= 3.4.2'
 # # Death to haphazard monkey-patching! Extend Minitest through simple hooks.
 # gem 'minitest-reporters', '~> 1.7', '>= 1.7.1'
 
+gem 'bootstrap', '~> 5.3.3'
+
 # Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
@@ -58,7 +60,7 @@ group :development do
 
   gem 'guard'
 
-  gem "bootstrap-sass"
+  # gem "bootstrap-sass"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end

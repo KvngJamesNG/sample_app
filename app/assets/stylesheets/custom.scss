@@ -1,6 +1,9 @@
-@import "bootstrap-sprockets";
+// @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+$gray-lighter: #f1f1f1;
+$state-danger-text: #dc3545;
 
 /* users index */
 .users {
@@ -10,6 +13,7 @@
     li {
         overflow: auto;
         padding: 10px 0;
+        // border-bottom: 1px solid $gray-lighter;
         border-bottom: 1px solid $gray-lighter;
     }
 }
@@ -69,7 +73,7 @@ input {
 }
 
 .field_with_errors {
-    @extend .has-error;
+    @extend .has-error !optional;
 
     .form-control {
         color: $state-danger-text;
