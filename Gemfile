@@ -32,8 +32,8 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.20'
 # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
 gem 'faker', '~> 3.4', '>= 3.4.2'
 
-# Death to haphazard monkey-patching! Extend Minitest through simple hooks.
-gem 'minitest-reporters', '~> 1.7', '>= 1.7.1'
+# # Death to haphazard monkey-patching! Extend Minitest through simple hooks.
+# gem 'minitest-reporters', '~> 1.7', '>= 1.7.1'
 
 # Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
@@ -60,10 +60,6 @@ group :development do
 
   gem "bootstrap-sass"
 
-  # gem 'sassc'
-
-  # gem "sassc-rails"
-
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
 
@@ -78,9 +74,12 @@ end
 group :production do
   # Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later.
   gem 'pg', '~> 1.5', '>= 1.5.8'
+  gem 'sass-rails'
+  gem 'uglifier'
+  gem 'webpacker'
 end
 
-group :assets do
-  gem 'sassc-rails'
-  gem 'uglifier'
-end
+# group :assets do
+#   gem 'sassc-rails'
+#   gem 'uglifier'
+# end

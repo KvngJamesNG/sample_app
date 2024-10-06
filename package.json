@@ -3,6 +3,6 @@
     "node": "20.x"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "5.x"
   }
 }
