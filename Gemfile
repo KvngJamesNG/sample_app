@@ -84,7 +84,7 @@ group :development do
 
   gem "bootstrap-sass"
 
-  gem 'sassc'
+  # gem 'sassc'
 
   # gem "sassc-rails"
 

@@ -3,10 +3,11 @@
 
 
 /* users index */
-.users{
+.users {
     list-style: none;
     margin: 0;
-    li{
+
+    li {
         overflow: auto;
         padding: 10px 0;
         border-bottom: 1px solid $gray-lighter;
@@ -14,13 +15,14 @@
 }
 
 /* dropdown menu */
-.dropdown-menu.active{
+.dropdown-menu.active {
     display: block;
 }
 
 /* mixins, variable, etc */
 $gray-medium-light: #eaeaea;
-@mixin box_sizing{
+
+@mixin box_sizing {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -28,63 +30,74 @@ $gray-medium-light: #eaeaea;
 
 /* forms */
 
-input, textarea, select, .uneditable-input{
+input,
+textarea,
+select,
+.uneditable-input {
     border: 1px solid #bbb;
     width: 100%;
     margin-bottom: 15px;
     @include box_sizing;
 }
 
-.checkbox{
+.checkbox {
     margin-top: -10px;
     margin-bottom: 10px;
-    span{
+
+    span {
         margin-left: 20px;
         font-weight: normal;
     }
 }
 
-#session_remember_me{
+#session_remember_me {
     width: auto;
     margin-left: 0;
 }
 
-input{
+input {
     height: auto !important;
 }
 
-#error_explanation{
+#error_explanation {
     color: red;
-    ul{
+
+    ul {
         color: red;
         margin: 0 0 30px 0;
     }
 }
-.field_with_errors{
+
+.field_with_errors {
     @extend .has-error;
-    .form-control{
+
+    .form-control {
         color: $state-danger-text;
     }
 }
 
 /* sidebar */
 aside {
-    section.user_info{
+    section.user_info {
         margin-top: 20px;
     }
-    section{
+
+    section {
         padding: 10px 0;
         margin-top: 20px;
-        &:first-child{
+
+        &:first-child {
             border: 0;
             padding-top: 0;
         }
-        span{
+
+        span {
             display: block;
             margin-bottom: 3px;
             line-height: 1;
         }
-        h1{
+
+        h1 {
             font-size: 1.4em;
             text-align: left;
             letter-spacing: -1px;
@@ -93,63 +106,72 @@ aside {
         }
     }
 }
-.gravatar{
+
+.gravatar {
     float: left;
     margin-right: 10px;
 }
-.gravatar_edit{
+
+.gravatar_edit {
     margin-top: 15px;
 }
 
 
 /* miscellaneous */
 .debug_dump {
-clear: both;
-width: 100%;
-float: left;
-margin-top: 45px;
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-top: 45px;
 }
 
 /* footer */
 footer {
-margin-top: 45px;
-padding-top: 5px;
-border-top: 1px solid #eaeaea;
-color: #777;
-a {
-color: #555;
-&:hover{
-color: #222;
-}
-}
-small{
-float: left;
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+
+    a {
+        color: #555;
+
+        &:hover {
+            color: #222;
+        }
+    }
+
+    small {
+        float: left;
+    }
+
+    ul {
+        float: right;
+        list-style: none;
+
+        & li {
+            float: left;
+            margin-left: 15px;
+        }
+    }
 }
 
-ul{
-float: right;
-list-style: none;
-& li{
-float: left;
-margin-left: 15px;
-}
-}
-}
-
-@media(max-width: 800px){
-    footer{
-        small{
+@media(max-width: 800px) {
+    footer {
+        small {
             display: block;
             float: none;
             margin-bottom: 1em;
         }
-        ul{
+
+        ul {
             float: none;
             padding: 0;
-            li{
+
+            li {
                 float: none;
                 padding: 0;
-                li{
+
+                li {
                     float: none;
                     margin-left: 0;
                 }
@@ -164,42 +186,51 @@ margin-left: 15px;
 }*/
 
 /* header */
-#logo{
-float: left;
-margin-right: 10px;
-font-size: 1.7em;
-color: #fff;
-text-transform: uppercase;
-letter-spacing: -1px;
-padding-top: 9px;
-font-weight: bold;
+#logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
 }
-#logo :hover{
-color: #fff;
-text-decoration: none;
+
+#logo :hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* typography */
-h1, h2, h3, h4, h5, h6 {
-line-height: 1;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
 }
+
 h1 {
-font-size: 3em;
-letter-spacing: -2px;
-margin-bottom: 30px;
-text-align: center;
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
 }
+
 h2 {
-font-size: 1.2em;
-letter-spacing: -1px;
-margin-bottom: 30px;
-text-align: center;
-font-weight: normal;
-color: #777;
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: #777;
 }
+
 p {
-font-size: 1.1em;
-line-height: 1.7em;
+    font-size: 1.1em;
+    line-height: 1.7em;
 }
 
 /* universal */
@@ -207,15 +238,19 @@ line-height: 1.7em;
 body {
     padding-top: 60px;
 }
-section{
-overflow: auto;
+
+section {
+    overflow: auto;
 }
-textarea{
-resize: vertical;
+
+textarea {
+    resize: vertical;
 }
-.center{
-text-align: center;
+
+.center {
+    text-align: center;
 }
-.center h1{
-margin-bottom: 10px;
+
+.center h1 {
+    margin-bottom: 10px;
 }
