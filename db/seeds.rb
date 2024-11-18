@@ -9,7 +9,7 @@
 #   end
 # Create a main sample user
 User.create!(name: "James",
-             email: "sample1@example.com",
+             email: "james@example.com",
              password: "test123",
              password_confirmation: "test123")
 
